@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Cooking Temperature Alert</title>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+  <script src="./resources/particle/particle.min.js"></script>
+</head>
+<body>
+  <div class="col-lg-12" id="login">
+    Cooking App Login <br>
+      Username: <input type="text" id="login_username" /><br>
+      Password: <input type="password" id="login_password" /><br>
+      <!-- login button redirects to main control page -->
+      <a class="button" id = "login_button">Login</a><br>
+      <!-- if user doesn't have account, can press button to a create account page -->
+      Don't have an account yet? <a class="button" id="create_account_page_button">Click Here</a>
+  </div>
+  <div id="account_creation">
+      Create Your Account:<br>
+      Username: <input id = "account_creation_username" type="text" /><br>
+      Password: <input id = "account_creation_password" type="password" /><br>
+      Verify Password: <input id="account_creation_verify_password" type="password" /><br>
+      <!-- create account button redirects back to login page -->
+      <a class="button" id="create_account_button">Create Account</a><br>
+      <!-- if the user already has an account, redirect back to login page to log in with existing info -->
+      Already have an account? <a class="button" id="login_page_button"> Click Here</a>
+  </div>
+  <div id ="cooking_control">
+    <div id="basic_control" class="col-md-3">
+      Current Setting: <span id ="temp_control_label">Heating</span> <a class="button" id="temp_control_button">Temperature Control</a><br><br>
+      Current Temperature: <span id = "current_temperature_label"> 0 degrees fahrenheit</span><br><br>
+      Target Temperature: <input id = "target_temperature_slider" class="mdl-slider mdl-js-slider" type="range"  min="30" max="300" value="80" tabindex="0"><span id = "target_temperature_label"> 80 degrees fahrenheit</span><br><br>
+      Telephone Number: <span id ="telephone_number_label"></span> <input id ="telephone_number_input" type = "text"/> <a id="telephone_number_button" class="button">Change</a><br><br>
+      <a class="button" id="logout_button"> Logout</a>
+    </div>
+  </div>
+<script src="./temperatureApp.js"></script>
+<script src="./temperatureSensor.js"></script>
+</body>
+</html>
